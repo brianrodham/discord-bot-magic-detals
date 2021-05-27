@@ -6,5 +6,9 @@
     {
         "value": "mtgbuyandsell has:images",
         "tag": "mtgbuyandsell"
+    },
+    { 
+        "value":"mtgbuysell has:images",
+        "tag": "mtgbuysell"
     }
 ]
