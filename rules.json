@@ -1,14 +1,6 @@
 [
     {
-        "value": "HobbesDeal has:images",
+        "value": "(HobbesDeal OR mtgbuysell OR mtgbuysell) has:images -is:retweet",
         "tag": "hobbes deal"
-    },
-    {
-        "value": "mtgbuyandsell has:images",
-        "tag": "mtgbuyandsell"
-    },
-    { 
-        "value":"mtgbuysell has:images",
-        "tag": "mtgbuysell"
     }
 ]
