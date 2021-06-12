@@ -7,7 +7,7 @@ const needle = require('needle');
 const token = config.twitter.bearer;
 
 const rulesURL = 'https://api.twitter.com/2/tweets/search/stream/rules';
-const streamURL = 'https://api.twitter.com/2/tweets/search/stream';
+const streamURL = 'https://api.twitter.com/2/tweets/search/stream?expansions=attachments.media_keys';
 const rules = require('./rules.json');
 
 client.on('ready', () => {
@@ -110,6 +110,8 @@ function getUserFromString(messageString){
 
 function postMessage(json){
     var user = getUserFromString(json.data.text);
+    console.log("Media keys: ", json.data.attachments.media_keys);
+    console.log("Media: ", json.includes.media);
     var id = json.data.id;
     var twitterUrl = `https://twitter.com/${user}/status/${id}`
     const channel = client.channels.cache.get(config.discord.channelId);
